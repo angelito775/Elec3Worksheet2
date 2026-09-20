@@ -1,0 +1,111 @@
+### Get home page
+GET http://localhost:3000/
+
+### Get about page
+GET http://localhost:3000/about
+
+### Get contact page
+GET http://localhost:3000/contact
+
+### Get all authors
+GET http://localhost:3000/authors
+Authorization: Bearer 12345
+x-user-role: Faculty
+
+### Get author by id
+GET http://localhost:3000/authors/1
+Authorization: Bearer 12345
+x-user-role: Faculty
+
+### Get all books
+GET http://localhost:3000/books
+
+### Get book by id
+GET http://localhost:3000/books/1
+
+### Add book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "The Hobbit",
+  "author": "Raymund Valerio",
+  "category": "Fantasy",
+  "publicationYear": 1930,
+  "available": true
+}
+
+### Update book by id in URL
+PUT http://localhost:3000/books/1
+Content-Type: application/json
+
+{
+  "title": "The Lord of the Rings",
+  "author": "Angelito Biandilla",
+  "category": "Fantasy",
+  "publicationYear": 1998,
+  "available": true
+}
+
+### Add second book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "The Legend of Hotdogs",
+  "author": "Angelito Biandilla",
+  "category": "Fantasy",
+  "publicationYear": 1999,
+  "available": true
+}
+
+### Update second book
+PUT http://localhost:3000/books/2
+Content-Type: application/json
+
+{
+  "title": "Hunchies",
+  "author": "Angelito Biandilla",
+  "category": "Fantasy",
+  "publicationYear": 1999,
+  "available": true
+}
+
+### Add third book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "The Bible",
+  "author": "Isaiah",
+  "category": "Religion",
+  "publicationYear": 200,
+  "available": true
+}
+
+### Update third book
+PUT http://localhost:3000/books/3
+Content-Type: application/json
+
+{
+  "title": "Avatar",
+  "author": "James Cameron",
+  "category": "Religion",
+  "publicationYear": 200,
+  "available": true
+}
+
+### Delete book 1
+DELETE http://localhost:3000/books/1
+
+### Delete book 2
+DELETE http://localhost:3000/books/2
+
+### Delete book 3
+DELETE http://localhost:3000/books/3
+
+### Test error for middleware
+GET http://localhost:3000/test-error
