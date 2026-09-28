@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Express Application</title>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+<main>
+  <h1>Welcome to My Express Application</h1>
+  <p>This page is rendered using EJS.</p>
+
+  <h2>Book Information</h2>
+  <p>Name: <%= book.name %></p>
+  <p>Course: <%= book.nationality %></p>
+  <p>Book Genre: <%= book.genre %></p>
+  <p>Email: <%= book.email %></p>
+  <%- include('partials/footer') %>
+</main>
+
+</body>
+
+</html>

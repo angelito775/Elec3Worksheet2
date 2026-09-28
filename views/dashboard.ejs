@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<body>
+  <%- include('partials/header') %>
+<main>
+
+  <h1>Welcome, <%= student.name %></h1>
+  <p>Course: <%= student.course %></p>
+  <p>Year Level: <%= student.year %></p>
+  <br>
+  <p>Total Books: <%= totalBooks %></p>
+  <p>Total Authors: <%= totalAuthors %></p>
+
+  <% if (totalBooks > 0) { %>
+    <p>System Status: Active (Books are available in the catalog).</p>
+  <% } else { %>
+    <p>System Status: Empty (No books registered yet).</p>
+  <% } %>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

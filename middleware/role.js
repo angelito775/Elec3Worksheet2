@@ -1,5 +1,5 @@
 function checkRole(req, res, next) {
- const role = req.headers['x-user-role'];
+ const role = req.headers['x-user-role']|| req.query.role;
  if (role !== 'Faculty') {
  return res.status(403).json({
  message: 'Faculty access only'

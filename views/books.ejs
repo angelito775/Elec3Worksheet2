@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+</head>
+
+<body>
+     <%- include('partials/header') %>
+  <main>
+     <h1>Books List</h1>
+
+
+  <ul>
+    <% books.forEach(book => { %>
+    <li>
+      <%= book.id %>
+      <%= book.name %>
+      <%= book.nationality %>
+      <%= book.genre %>
+      <%= book.email %>
+    </li>
+    <% }); %>
+  </ul>
+
+  <% if (books.length > 0) { %>
+  <p>There are Books registered in the system.</p>
+  <% } else { %>
+  <p>No Books found.</p>
+  <% } %>
+  </main>
+
+ <%- include('partials/footer') %>
+</body>
+
+</html>

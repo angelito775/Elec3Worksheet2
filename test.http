@@ -1,5 +1,7 @@
 ### Get home page
 GET http://localhost:3000/
+### Get home page
+GET http://localhost:3000/books/view
 
 ### Get about page
 GET http://localhost:3000/about
